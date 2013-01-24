@@ -13,8 +13,9 @@ MyCtrl2.$inject = [];
 
 function nameManager($scope) {
 	$scope.names = ["Jay", "Sandy", "Aades", "Sarang"];
-}
+	console.log("log statements are printed in Angular.");
 
-function printName(name) {
-	console.log(name + " has been clicked");
+	$scope.printName = function(name) {
+		console.log(name + " has been clicked");
+	}
 }

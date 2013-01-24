@@ -16,10 +16,15 @@
   <input type="text" ng-model="input" />  {{input}}
 
   <div ng-controller="nameManager">
-      <input type="button" ng-repeat="name in names" ng-click="printName(name)" /> {{name}}
+      <button ng-repeat="name in names" ng-click="printName(name)">{{name}}</button>
   </div>
 
-  <div>Angular seed app: v<span app-version></span></div>
+  <button ng-click="count = count + 1" ng-init="count=0">
+      Increment
+  </button>
+  count: {{count}}
+
+  <!-- <div>Angular seed app: v<span app-version></span></div> -->
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
